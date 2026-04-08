@@ -53,6 +53,7 @@ with open("clean_stations.csv") as f:
             )
         )
 
+conn.commit()
 # -----------------------------
 # Wczytywanie clean_measure.csv
 # -----------------------------
@@ -69,6 +70,7 @@ with open("clean_measure.csv") as f:
             )
         )
 
+conn.commit()
 # Test
 print(conn.execute("SELECT * FROM stations LIMIT 5").fetchall())
 
